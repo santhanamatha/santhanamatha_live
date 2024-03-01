@@ -5,3 +5,4 @@ pillow
 requests==2.31.0
 sqlparse==0.4.4
 dj-database-url
+whitenoise
