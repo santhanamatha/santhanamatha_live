@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} Event {% endblock %}
+
+</head>
+<body>
+    {% block content %}
+        <h2 class="v_title" >Events</h2>
+        <div>
+            <form  method="GET" action="{% url 'event' %}" style="text-align: right;" class="mr-5" >
+                <select name="duration" class="filter_select">
+                    <option value="1h" {% if duration == '1h' %} selected {% endif %}>Past 1 Hour</option>
+                    <option value="1d" {% if duration == '1d' %} selected {% endif %}>Past 1 Day</option>
+                    <option value="1w" {% if duration == '1w' %} selected {% endif %}>Past 1 Week</option>
+                    <option value="1m" {% if duration == '1m' %} selected {% endif %}>Past 1 Month</option>
+                    <option value="1y" {% if duration == '1y' %} selected {% endif %}>Past 1 Year</option>
+                    <option value="all" {% if duration == 'all' %} selected {% endif %}>All</option>
+                </select>
+                <button type="submit" class="filter_btn">Filter</button>
+            </form>
+        </div>
+        <div class="pagination" style="justify-content: center;" >
+            <span class="step-links">
+                {% if events.has_previous %}
+                    <a href="?page=1&duration={{ duration }}">&laquo; first</a>
+                    <a href="?page={{ events.previous_page_number }}&duration={{ duration }}">previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ events.number }} of {{ events.paginator.num_pages }}.
+                </span>
+        
+                {% if events.has_next %}
+                    <a href="?page={{ events.next_page_number }}&duration={{ duration }}">next</a>
+                    <a href="?page={{ events.paginator.num_pages }}&duration={{ duration }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+        
+        <div class="video-container" style="place-content: center;color: #9e052b;" >
+            {% if events %}
+                {% for event in events %}
+                    <div class="video-item">
+                        <img src="{{ event.image.url }}" style="width: 400px !important;height: 460px;">
+                        <br>
+                        <a style="border-radius: 13px;background: #9e052b;"  href="{{ event.image.url }}" download="event_image.jpg" class="btn btn-primary mt-2">Download</a>
+                        <a style="text-decoration: none;font-size: large;">{{ event.discription }}</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div>
+                    <h3>No data found</h3>
+                </div>
+            {% endif %}    
+        </div>
+        
+        <div class="pagination mb-4" style="justify-content: center;" >
+            <span class="step-links">
+                {% if events.has_previous %}
+                    <a href="?page=1&duration={{ duration }}">&laquo; first</a>
+                    <a href="?page={{ events.previous_page_number }}&duration={{ duration }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ events.number }} of {{ events.paginator.num_pages }}.
+                </span>
+
+                {% if events.has_next %}
+                    <a href="?page={{ events.next_page_number }}&duration={{ duration }}">next</a>
+                    <a href="?page={{ events.paginator.num_pages }}&duration={{ duration }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endblock %}
+</body>
+</html>

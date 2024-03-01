@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} Video {% endblock %}
+
+</head>
+<body>
+    {% block content %}
+        <h2 class="v_title">Festival videos</h2>
+        <div>
+            <form method="GET" action="{% url 'festival_videos' %}" style="text-align: right;" class="mr-5">
+                <select name="duration" class="filter_select">
+                    <option value="1h" {% if duration == '1h' %} selected {% endif %}>Past 1 Hour</option>
+                    <option value="1d" {% if duration == '1d' %} selected {% endif %}>Past 1 Day</option>
+                    <option value="1w" {% if duration == '1w' %} selected {% endif %}>Past 1 Week</option>
+                    <option value="1m" {% if duration == '1m' %} selected {% endif %}>Past 1 Month</option>
+                    <option value="1y" {% if duration == '1y' %} selected {% endif %}>Past 1 Year</option>
+                    <option value="all" {% if duration == 'all' %} selected {% endif %}>All</option>
+                </select>
+                <button type="submit" class="filter_btn">Filter</button>
+            </form>
+        </div>
+        <div class="pagination" style="justify-content: center;">
+            <span class="step-links">
+                {% if videos.has_previous %}
+                    <a href="?page=1&duration={{ duration }}">&laquo; first</a>
+                    <a href="?page={{ videos.previous_page_number }}&duration={{ duration }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ videos.number }} of {{ videos.paginator.num_pages }}.
+                </span>
+
+                {% if videos.has_next %}
+                    <a href="?page={{ videos.next_page_number }}&duration={{ duration }}">next</a>
+                    <a href="?page={{ videos.paginator.num_pages }}&duration={{ duration }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+        <div class="video-container" style="place-content: center;color: #9e052b;">
+            {% if videos %}
+                {% for video in videos %}
+                    <div class="video-item">
+                        <a href="{{ video.youtube_link }}" target="_blank">
+                            <img src="https://img.youtube.com/vi/{{ video.get_video_id }}/0.jpg" alt="Thumbnail">
+                        </a><br>
+                        <a style="text-decoration: none;font-size: large;" href="{{ video.youtube_link }}" target="_blank">{{ video.discription }}</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div>
+                    <h3>No data found</h3>
+                </div>
+            {% endif %}      
+        </div>
+
+        <div class="pagination" style="justify-content: center;">
+            <span class="step-links">
+                {% if videos.has_previous %}
+                    <a href="?page=1&duration={{ duration }}">&laquo; first</a>
+                    <a href="?page={{ videos.previous_page_number }}&duration={{ duration }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ videos.number }} of {{ videos.paginator.num_pages }}.
+                </span>
+
+                {% if videos.has_next %}
+                    <a href="?page={{ videos.next_page_number }}&duration={{ duration }}">next</a>
+                    <a href="?page={{ videos.paginator.num_pages }}&duration={{ duration }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endblock %}
+</body>
+</html>

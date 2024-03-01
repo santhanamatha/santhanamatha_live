@@ -1,0 +1,85 @@
+{
+    "bgimage" : "./images/bg/bg-payment.png",
+    "normal" : {
+        "min" : 1,
+        "max" : 10,
+        "steps" : 1,
+        "price_mappings" : [
+            {
+                "albums" : 1,
+                "price" : 1500
+            },
+            {
+                "albums" : 2,
+                "price" : 3000
+            },
+            {
+                "albums" : 3,
+                "price" : 4500
+            },
+            {
+                "albums" : 4,
+                "price" : 6000
+            },
+            {
+                "albums" : 5,
+                "price" : 7500
+            },
+            {
+                "albums" : 6,
+                "price" : 9000
+            },
+            {
+                "albums" : 7,
+                "price" : 10500
+            },
+            {
+                "albums" : 8,
+                "price" : 12000
+            },
+            {
+                "albums" : 9,
+                "price" : 13500
+            },
+            {
+                "albums" : 10,
+                "price" : 15000
+            }
+        ]
+    },
+    "annual" : {
+        "min" : 10,
+        "max" : 50,
+        "steps" : 5,
+        "price_mappings" : [
+            { 
+                "albums" : 10,
+                "price" : 14000
+            },
+            { 
+                "albums" : 15,
+                "price" : 20625
+            },
+            { 
+                "albums" : 20,
+                "price" : 27000
+            },
+            { 
+                "albums" : 25,
+                "price" : 30000
+            },
+            { 
+                "albums" : 30,
+                "price" : 35250
+            },
+            { 
+                "albums" : 40,
+                "price" : 46000
+            },
+            { 
+                "albums" : 50,
+                "price" : 50000
+            }
+        ]
+    }
+}

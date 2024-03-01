@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {% block title %} Home {% endblock %} </title>
+        <link rel="icon" type="image/png" href="{% static 'images/matha2.jpeg' %}">
+        <link rel="stylesheet" href="{% static '/css/index.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block style %} 
+            <style>
+            </style>
+        {% endblock %}
+    </head>
+    <body style="background: rgb(253 234 216 / 94%);font-family: 'Font Awesome 5 Free';">
+        <div class="container-flued">
+            {% block navigation %}
+            <div class="fullnav">
+                <div>
+                    <img src="{% static 'images/matha2.jpeg' %}" style="width: 3.5%;float: left;" class="ml-5 m-2 logo" alt="Logo">
+                    <p class="logo_name">Santhanamatha</p>
+                </div>
+                <div class="topnav" id="myTopnav">
+                    <a class="ml-2" href="#" ></a>
+                    <a class="ml-2 home_algn" href="{% url 'home' %}" >Home</a>
+                    <a href="#santhanamadha_prayer">Prayer</a>
+                    <a href="{% url 'mass_schedule' %}">Mass Schedule</a> 
+                    <a href="{% url 'event' %}">Events</a>
+                    <a href="{% url 'festival_videos' %}">Videos</a>
+                    <a href="{% url 'contact' %}">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            {% endblock %}
+            {% block content%}
+            <div class="slideshow-container" style="margin-top: 5%;" >
+                <div class="mySlides fade">
+                  <img src="{% static 'images/c1.jpeg' %}" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="{% static 'images/c2.jpeg' %}" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="{% static 'images/c4.jpeg' %}" style="width:100%">
+                    <div class="text">Caption Three</div>
+                  </div>                
+            </div>
+            <div style="text-align:center;display: none;">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+            {% endblock %}
+            
+        </div>
+        <footer>
+            <div class="left">© Copyright Santhanamatha 2024. All rights reserved.</div>
+            <div class="right mr-3">Designed and Developed by: A Edwin Joe <br> Contact: edwinjoedevops@gmail.com</div>
+        </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>     
+    </body>
+</html>
