@@ -134,7 +134,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'sanathanamatha',
+    'CLOUD_NAME': 'dygjtp3fm',
     'API_KEY': '191267879285569',
     'API_SECRET': "d37icOaVj6it27qEUAHftWSWHmM"
 }
