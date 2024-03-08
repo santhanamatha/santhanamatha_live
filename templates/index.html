@@ -19,49 +19,153 @@
     <body style="background: rgb(253 234 216 / 94%);font-family: 'Font Awesome 5 Free';">
         <div class="container-flued">
             {% block navigation %}
-            <div class="fullnav">
-                <div>
-                    <img src="{% static 'images/matha2.jpeg' %}" style="width: 3.5%;float: left;" class="ml-5 m-2 logo" alt="Logo">
-                    <p class="logo_name">Santhanamatha</p>
+                <div class="fullnav">
+                    <div>
+                        <img src="{% static 'images/matha2.jpeg' %}" style="width: 3.5%;float: left;" class="ml-5 m-2 logo" alt="Logo">
+                        <p class="logo_name">Santhanamatha</p>
+                    </div>
+                    <div class="topnav" id="myTopnav">
+                        <a class="ml-2" href="#" ></a>
+                        <a class="ml-2 home_algn" href="{% url 'home' %}" >Home</a>
+                        <a href="{% url 'prayer' %}">Prayer</a>
+                        <a href="{% url 'mass_schedule' %}">Mass Schedule</a> 
+                        <a href="{% url 'event' %}">Events</a>
+                        <a href="{% url 'festival_videos' %}">Videos</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="topnav" id="myTopnav">
-                    <a class="ml-2" href="#" ></a>
-                    <a class="ml-2 home_algn" href="{% url 'home' %}" >Home</a>
-                    <a href="#santhanamadha_prayer">Prayer</a>
-                    <a href="{% url 'mass_schedule' %}">Mass Schedule</a> 
-                    <a href="{% url 'event' %}">Events</a>
-                    <a href="{% url 'festival_videos' %}">Videos</a>
-                    <a href="{% url 'contact' %}">Contact</a>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-            </div>
             {% endblock %}
             {% block content%}
-            <div class="slideshow-container" style="margin-top: 5%;" >
-                <div class="mySlides fade">
-                  <img src="{% static 'images/c1.jpeg' %}" style="width:100%">
-                  <div class="text">Caption Text</div>
+                <div>
+                    <div class="slideshow-container" style="margin-top: 6%;" >
+                        <div class="mySlides fade" style="text-align-last: center;">
+                        <img src="{% static 'images/c1.jpeg' %}" style="width:95%">
+                        <div class="text">Caption Text</div>
+                        </div>
+                        
+                        <div class="mySlides fade" style="text-align-last: center;">
+                        <img src="{% static 'images/c2.jpeg' %}" style="width:95%">
+                        <div class="text">Caption Two</div>
+                        </div>
+                        
+                        <div class="mySlides fade" style="text-align-last: center;">
+                            <img src="{% static 'images/c4.jpeg' %}" style="width:95%">
+                            <div class="text">Caption Three</div>
+                        </div>                
+                    </div>
+                    <div style="text-align:center;display: none;">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                    </div>
                 </div>
-                
-                <div class="mySlides fade">
-                  <img src="{% static 'images/c2.jpeg' %}" style="width:100%">
-                  <div class="text">Caption Two</div>
+                <div class="ffbox mb-5 card_align" > 
+                    <div class="ffbox1">
+                        <div> 
+                            <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதா வரலாறு</h1> 
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவன் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
+                                        தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து /
+                                        நீர் வளம் பெற்ற மரம் போல் / இவ்வுலக வாழ்விலே நற்பணி தந்து / எங்களுக்கு இறைவன் தந்த மக்கள் செல்வங்களை / நன்னெறியில்  நடத்த அருள் புரியும். / நாங்கள் அருளிலும் அறிவிலும்  / அன்பிலும் அமைதியிலும் வாழ்ந்து / வளம் பெற செய்தருளும்.  / உலக வாழ்க்கையிலே / குறுக்கிடும்  அனைத்து</p>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="mySlides fade">
-                    <img src="{% static 'images/c4.jpeg' %}" style="width:100%">
-                    <div class="text">Caption Three</div>
-                  </div>                
-            </div>
-            <div style="text-align:center;display: none;">
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-            </div>
+                <div>
+                    <h2 class="gfg mb-4 navanal_heading">தேவாலய நிகழ்வுகள்</h1> 
+                </div>
+                <div class="video-container" style="place-content: center;color: #9e052b;" >
+                    {% if last_two_events %}
+                        {% for event in last_two_events %}
+                            <div class="video-item">
+                                <img src="{{ event.image.url }}" style="width: 400px !important;height: 460px;">
+                                <br>
+                                <a style="border-radius: 13px;background: #9e052b;"  href="{{ event.image.url }}" download="event_image.jpg" class="btn btn-primary mt-2">Download</a>
+                                <a style="text-decoration: none;font-size: large;">{{ event.discription }}</a>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div>
+                            <h3>No data found</h3>
+                        </div>
+                    {% endif %}
+                    <a class="more_span_align" href="{% url 'event' %}"><span class="more_span"> More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                    </span></a>
+                </div>
+                <div class="ffbox mb-5 card_align" > 
+                    <div class="ffbox1">
+                        <div> 
+                            <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதாவை நோக்கி ஜெபம்</h1> 
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவன் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
+                                        தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து /
+                                        நீர் வளம் பெற்ற மரம் போல் / இவ்வுலக வாழ்விலே நற்பணி தந்து / எங்களுக்கு இறைவன் தந்த மக்கள் செல்வங்களை / நன்னெறியில்  நடத்த அருள் புரியும். / நாங்கள் அருளிலும் அறிவிலும்  / அன்பிலும் அமைதியிலும் வாழ்ந்து / வளம் பெற செய்தருளும்.  / உலக வாழ்க்கையிலே / குறுக்கிடும்  அனைத்து
+                                        <a class="ml-3" href="{% url 'prayer' %}"> Read More ...</a></p>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="gfg mb-3 navanal_heading">தேவாலய வீடியோக்கள்</h1> 
+                </div>
+                <div class="video-container" style="place-content: center;color: #9e052b;">
+                    {% if last_two_videos %}
+                        {% for video in last_two_videos %}
+                            <div class="video-item">
+                                <a href="{{ video.youtube_link }}" target="_blank">
+                                    <img src="https://img.youtube.com/vi/{{ video.get_video_id }}/0.jpg" alt="Thumbnail">
+                                </a><br>
+                                <a style="text-decoration: none;font-size: large;" href="{{ video.youtube_link }}" target="_blank">{{ video.discription }}</a>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div>
+                            <h3>No data found</h3>
+                        </div>
+                    {% endif %} 
+                    <a class="more_span_align" href="{% url 'festival_videos' %}"><span class="more_span"> More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                    </span></a>        
+                </div>
+                <div style="color: #440707;">
+                    <h2 class="gfg mb-4 navanal_heading mt-3">தேவாலய அமைப்புகள்</h1>
+                    <div class="row" style="margin-right:0 !important;">
+                        <div class="col-6 organisation">
+                            <h3 class="organisation_txt" style="text-align: right;">* பங்கு நிர்வாகக்குழு</h3>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="organisation_txt">*  வின்சென்ட் தே பவுல் சபை</h3>
+                        </div>
+                    </div> 
+                    <div class="row" style="margin-right:0 !important;">
+                        <div class="col-6 organisation" style="text-align: right;">
+                            <h3 class="organisation_txt">* மரியாயின் சேனை</h3>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="organisation_txt">* அன்பியக் குடும்பங்கள்</h3>
+                        </div>
+                    </div> 
+                    <div class="row" style="margin-right:0 !important;">
+                        <div class="col-12 organisation">
+                            <h3 class="organisation_txt">* இளைஞர் மன்றம்</h3>
+                        </div>
+                    </div>
+                </div>
             {% endblock %}
-            
         </div>
         <footer>
             <div class="left">© Copyright Santhanamatha 2024. All rights reserved.</div>

@@ -8,6 +8,7 @@ from .views import *
 urlpatterns = [
     path('', HomePage.as_view(), name='home'),
     path('mass_schedule', MasstimePage.as_view(), name='mass_schedule'),
+    path('prayer', PrayerPage.as_view(), name='prayer'),
     path('festival_videos', video_list, name='festival_videos'),
     path('event', event_list, name='event'),
     path('contact', ContactPage.as_view(), name='contact'),

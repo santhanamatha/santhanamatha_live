@@ -8,7 +8,7 @@
 </head>
 <body>
     {% block content %}
-        <h2 class="v_title" >Events</h2>
+        <h2 class="v_title" >தேவாலய நிகழ்வுகள்</h2>
         <div>
             <form  method="GET" action="{% url 'event' %}" style="text-align: right;" class="mr-5" >
                 <select name="duration" class="filter_select">
@@ -46,7 +46,7 @@
                     <div class="video-item">
                         <img src="{{ event.image.url }}" style="width: 400px !important;height: 460px;">
                         <br>
-                        <a style="border-radius: 13px;background: #9e052b;"  href="{{ event.image.url }}" download="event_image.jpg" class="btn btn-primary mt-2">Download</a>
+                        <a style="border-radius: 13px;background: #9e052b;" target="_blank"  href="{{ event.image.url }}" class="btn btn-primary mt-2">Download</a>
                         <a style="text-decoration: none;font-size: large;">{{ event.discription }}</a>
                     </div>
                 {% endfor %}

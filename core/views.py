@@ -10,10 +10,22 @@ class HomePage(View):
     template_name = 'index.html'
     
     def get(self, request):
-        return render(request, self.template_name)
+        last_two_videos = VideoModel.objects.all().order_by('-date')[:2]
+        last_two_events = EventModel.objects.all().order_by('-date')[:2]
+        context = {
+        'last_two_videos': last_two_videos,
+        'last_two_events': last_two_events,
+        }
+        return render(request, self.template_name, context)
     
 class MasstimePage(View):
     template_name = 'masstime.html'
+    
+    def get(self, request):
+        return render(request, self.template_name)
+
+class PrayerPage(View):
+    template_name = 'prayer.html'
     
     def get(self, request):
         return render(request, self.template_name)
