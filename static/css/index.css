@@ -149,14 +149,71 @@ html::-webkit-scrollbar-thumb:hover {
     background: whitesmoke;
     color: #9e052b;
   }
+  .days {
+    margin-left: 54px !important;
+  }
+  .tcontent {
+    margin-left: 85px !important;
+    padding-left: 15px !important;
+    font-weight: bold;
+    color: #300404;
 
-  
+  }
+  .ttopdic{
+    margin-top: 25px;
+  }
+  .background-container {
+    background-image: url('../images/church_base_img-2.png');
+    /* Other background properties */
+    background-size: 88% 113%;
+    /* Adjust as needed */
+    background-repeat: space;
+    background-color: aliceblue;
+    background-blend-mode: multiply;
+    background-position: center; /* Adjust as needed */
+  }
+  .navanal_1 {
+    text-align: right;
+  }
+  .more_span {
+    background-color: #9e052b;
+    padding: 15px;
+    color: white;
+    border-radius: 27px;
+  }
+  .more_span {
+    background-color: #9e052b;
+    padding: 15px;
+    color: white;
+    border-radius: 27px;
+  }
+  .more_span:hover {
+    background-color: #881c37;
+    padding: 15px;
+    border: 1px solid #ff00eb;
+    color: white;
+    border-radius: 27px;
+  }
+  .more_span_align {
+    margin-top: 13%;
+    margin-left: -53px;
+    text-decoration: none;
+  }
+  .more_span_align:hover {
+    text-decoration: none;
+  }
+  .organisation {
+    text-align: center;
+  }
+
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
       display: block;
       color: #494545;
+      padding-right: 39px;
+      padding-top: 15px;
     }
   }
   
@@ -168,6 +225,54 @@ html::-webkit-scrollbar-thumb:hover {
       right: 0;
       top: 0;
     }
+    .background-container {
+      background-image: url(../images/church_base_img-2.png);
+      background-size: 88% 96%;
+      background-repeat: space;
+      background-color: aliceblue;
+      background-blend-mode: multiply;
+      background-position: center;
+  }
+  .organisation_txt {
+    font-size: 15px;
+  }
+  .more_span_align {
+    margin-top: 1%;
+    margin-left: 0px;
+    text-decoration: none;
+  }
+  .more_span_align:hover {
+    text-decoration: none;
+  }
+  .v_title{
+    margin-top: 6%;
+    text-align: center;
+    font-weight: bold;
+    color: #9e052b;
+    font-size: 25px;
+  
+  }
+    .video-item img {
+      max-width: 100%;
+      padding: 6px;
+  }
+    .navanal_1 {
+      text-align: right;
+      font-size: 10px;
+    }
+    .navanal_2 {
+      font-size: 10px;
+    }
+    .navanal_heading {
+      font-size: 14px;
+    }
+    .filter_select {
+      width: 15%;
+      padding: 3px;
+      border-radius: 5px;
+      background: whitesmoke;
+      color: #9e052b;
+    }
     .home_algn {
       margin-top: 40px;
     }
@@ -175,6 +280,23 @@ html::-webkit-scrollbar-thumb:hover {
       float: none;
       display: block;
       text-align: center;
+    }
+    .weekdays {
+      font-size: 15px;
+    }
+    .days {
+      font-size: 11px;
+      margin-left: 21px !important;
+    }
+    .tcontent {
+      font-size: 11px;
+      margin-left: 25px !important;
+      padding-left: 15px !important;
+      font-weight: bold;
+      color: #300404;
+    }
+    .ttopdic{
+      margin-top: 19px;
     }
     .slideshow-container {
       position: relative;
@@ -189,7 +311,7 @@ html::-webkit-scrollbar-thumb:hover {
       display: block;
       color:  rgb(231, 168, 168);
       text-align: center;
-      padding: 1% 1% 0% !important;
+      padding: 2% 2% 0% !important;
       text-decoration: none;
       font-size: 25px;
     }
@@ -240,7 +362,6 @@ html::-webkit-scrollbar-thumb:hover {
 .ffbox { 
 	display: flex; 
 	width: 80%; 
-	max-width: 870px; 
 	background-color: #fff; 
 	border: 3px solid #e4e4e9; 
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -250,7 +371,7 @@ html::-webkit-scrollbar-thumb:hover {
 } 
 
 .card_align{
-  margin-left: 16%;
+  margin-left: 10%;
   margin-top: 8%;
 }
 
@@ -367,7 +488,7 @@ button:hover {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 9px;
   justify-content: space-between;
   align-items: center;
   bottom: 0;
