@@ -12,4 +12,4 @@ urlpatterns = [
     path('festival_videos', video_list, name='festival_videos'),
     path('event', event_list, name='event'),
     path('contact', ContactPage.as_view(), name='contact'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
