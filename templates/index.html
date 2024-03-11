@@ -5,18 +5,22 @@
         <meta charset="UTF-8">
         <title> {% block title %} Home {% endblock %} </title>
         <link rel="icon" type="image/png" href="{% static 'images/matha2.jpeg' %}">
-        <link rel="stylesheet" href="{% static '/css/index.css' %}">
+        <link rel="stylesheet" href='../static/css/index.css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block style %} 
             <style>
             </style>
         {% endblock %}
     </head>
-    <body style="background: rgb(253 234 216 / 94%);font-family: 'Font Awesome 5 Free';">
+    <body style="background: rgb(253 234 216 / 94%);font-family: 'Mukta Malar', sans-serif;font-weight: 400;font-style: normal;">
         <div class="container-flued">
             {% block navigation %}
                 <div class="fullnav">
@@ -67,13 +71,11 @@
                         <div> 
                             <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதா வரலாறு</h1> 
                             <div class="row">
-                                <div class="col-1"></div>
-                                <div class="col-10">
+                                <div class="col-12">
                                     <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவன் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
                                         தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து /
                                         நீர் வளம் பெற்ற மரம் போல் / இவ்வுலக வாழ்விலே நற்பணி தந்து / எங்களுக்கு இறைவன் தந்த மக்கள் செல்வங்களை / நன்னெறியில்  நடத்த அருள் புரியும். / நாங்கள் அருளிலும் அறிவிலும்  / அன்பிலும் அமைதியிலும் வாழ்ந்து / வளம் பெற செய்தருளும்.  / உலக வாழ்க்கையிலே / குறுக்கிடும்  அனைத்து</p>
                                 </div>
-                                <div class="col-1"></div>
                             </div>
                         </div>
                     </div>
@@ -106,14 +108,12 @@
                         <div> 
                             <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதாவை நோக்கி ஜெபம்</h1> 
                             <div class="row">
-                                <div class="col-1"></div>
-                                <div class="col-10">
+                                <div class="col-12">
                                     <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவன் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
                                         தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து /
                                         நீர் வளம் பெற்ற மரம் போல் / இவ்வுலக வாழ்விலே நற்பணி தந்து / எங்களுக்கு இறைவன் தந்த மக்கள் செல்வங்களை / நன்னெறியில்  நடத்த அருள் புரியும். / நாங்கள் அருளிலும் அறிவிலும்  / அன்பிலும் அமைதியிலும் வாழ்ந்து / வளம் பெற செய்தருளும்.  / உலக வாழ்க்கையிலே / குறுக்கிடும்  அனைத்து
                                         <a class="ml-3" href="{% url 'prayer' %}"> Read More ...</a></p>
                                 </div>
-                                <div class="col-1"></div>
                             </div>
                         </div>
                     </div>

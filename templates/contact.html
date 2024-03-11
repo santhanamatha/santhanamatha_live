@@ -8,9 +8,9 @@
 </head>
 <body>
     {% block content %}
-        <div class="ffbox mb-5 card_align" > 
+        <div class="ffbox mb-5 card_align contect_info" > 
             <div class="ffbox1"> 
-                <h2 class="gfg">Contact INFO</h1> 
+                <h2 class="gfg">For Contact</h1> 
                 <p>St. Anne's Church<br>
                     Mariamman Kovil,<br>
                     Thanjavur District,<br>
@@ -24,7 +24,7 @@
                     Rector and Parish Priest<br>
                     Tel: +91-99768 67070<br>
                 </p>
-                <div class="bot_icon" style="font-size: x-large;" >
+                <div class="bot_icon" style="font-size: x-large;text-align: center;" >
                     <a href="http://www.youtube.com/@santhanamatha7134" target="_blank" >
                         <svg style="fill: #9e052b;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24">
                             <path d="M23.6 7.6s-.2-1.7-1-2.4c-.9-.8-1.9-.8-2.4-.9C17.7 4 12 4 12 4s-5.7 0-7.2.3c-.5.1-1.5.1-2.4.9-.8.7-1 2.4-1 2.4S1 9.3 1 11.1v1.8c0 1.8.2 3.5.2 3.5s.2 1.7 1 2.4c.9.8 2.1.9 2.6 1C6.3 20 12 20 12 20s5.7 0 7.2-.3c.5-.1 1.5-.1 2.4-.9.8-.7 1-2.4 1-2.4s.2-1.7.2-3.5v-1.8c0-1.8-.2-3.5-.2-3.5zM9.5 15.5V8.5l6 3-6 4z"/>
@@ -43,8 +43,8 @@
                 </div>
                 
             </div> 
-            <div class="map-div"> 
-                <iframe src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.1602802684192!2d79.173622!3d10.7822804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab8730f70b46d%3A0x58bd5c6b71d206b8!2sSt.+Anne's+Church!5e0!3m2!1sen!2sin!4v1702963476861"
+            <div class="map-div map-wrap"> 
+                <iframe style="width: 100%;" src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.1602802684192!2d79.173622!3d10.7822804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab8730f70b46d%3A0x58bd5c6b71d206b8!2sSt.+Anne's+Church!5e0!3m2!1sen!2sin!4v1702963476861"
                         width="410"
                         height="99%"
                         allowfullscreen=""
@@ -56,18 +56,13 @@
         <div class="ffbox mb-5 card_align" style="margin-top: -2% !important;" > 
             <div class="ffbox1"> 
                 <h2 class="gfg">Donation Us</h1>
-                <h3> Account Detail</h3> 
                 <p class="ml-3">ACCOUNT NAME : PARISH PRIEST ST. ANNE'S CHURCH GNANAM NAGAR,<br>
                     ACCOUNT NO : 206510100033157<br>
                     IFSC CODE : UBIN 0820652<br>
                     BANK : UNION BANK OF INDIA, THANJAVUR<br>
                     BRANCH : THANJAVUR<br>
                 </p>
-            </div> 
-            <div class="map-div" style="background: unset !important;text-align: -webkit-center !important;" > 
-                <h2 class="gfg mt-3">UPI</h1>
-                <img class="mb-3" src="{% static 'images/santhanamatha_upi.png' %}">
-            </div> 
+            </div>
         </div> 
     {% endblock %}
 </body>

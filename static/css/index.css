@@ -77,7 +77,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 
   /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: 600px) {
   .text {font-size: 11px}
   }
   
@@ -107,7 +107,7 @@ html::-webkit-scrollbar-thumb:hover {
   .logo_name {
     float: left;
     display: block;
-    color:  rgb(231, 168, 168);
+    color:  rgb(235 230 230);
     text-align: center;
     padding: 1% 1% 0% !important;
     text-decoration: none;
@@ -149,15 +149,19 @@ html::-webkit-scrollbar-thumb:hover {
     background: whitesmoke;
     color: #9e052b;
   }
+  .weekdays {
+    color: black;
+  }
   .days {
     margin-left: 54px !important;
+    color: #4a4848;
   }
   .tcontent {
     margin-left: 85px !important;
     padding-left: 15px !important;
     font-weight: bold;
-    color: #300404;
-
+    color: #3800b7;
+    background-color: #ffffff85;
   }
   .ttopdic{
     margin-top: 25px;
@@ -233,6 +237,36 @@ html::-webkit-scrollbar-thumb:hover {
       background-blend-mode: multiply;
       background-position: center;
   }
+  .ffbox {
+        display: flex;
+        width: 96% !important;
+        background-color: #fff;
+        border: 3px solid #e4e4e9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        border-radius: 10px;
+        flex-wrap: wrap;
+      }
+      .background-container {
+        background-image: url('../images/church_base_img-2.png');
+        /* Other background properties */
+        background-size: 117% 112% !important;
+        /* Adjust as needed */
+        background-repeat: space;
+        background-color: aliceblue;
+        background-blend-mode: multiply;
+        background-position: center; /* Adjust as needed */
+      }
+      .card_align{
+        margin-left: 2% !important;
+        margin-top: 20% !important;
+      }
+
+      .ffbox1 {
+        flex: 1;
+        padding: 15px !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
   .organisation_txt {
     font-size: 15px;
   }
@@ -258,13 +292,13 @@ html::-webkit-scrollbar-thumb:hover {
   }
     .navanal_1 {
       text-align: right;
-      font-size: 10px;
+      font-size: 14px;
     }
     .navanal_2 {
-      font-size: 10px;
+      font-size: 14px;
     }
     .navanal_heading {
-      font-size: 14px;
+      font-size: 19px;
     }
     .filter_select {
       width: 15%;
@@ -275,25 +309,30 @@ html::-webkit-scrollbar-thumb:hover {
     }
     .home_algn {
       margin-top: 40px;
+      margin: 49px 0px 0px 0px !important;
     }
+
+    .map-wrap {
+      display: contents;
+   }
     .topnav.responsive a {
       float: none;
       display: block;
       text-align: center;
     }
     .weekdays {
-      font-size: 15px;
+      font-size: 23px;
     }
     .days {
-      font-size: 11px;
+      font-size: 16px;
+      font-weight: bold;
       margin-left: 21px !important;
     }
     .tcontent {
-      font-size: 11px;
+      font-size: 16px;
       margin-left: 25px !important;
       padding-left: 15px !important;
       font-weight: bold;
-      color: #300404;
     }
     .ttopdic{
       margin-top: 19px;
@@ -309,7 +348,6 @@ html::-webkit-scrollbar-thumb:hover {
     .logo_name {
       float: left;
       display: block;
-      color:  rgb(231, 168, 168);
       text-align: center;
       padding: 2% 2% 0% !important;
       text-decoration: none;
@@ -320,7 +358,6 @@ html::-webkit-scrollbar-thumb:hover {
         display: block;
         color: #f2f2f2;
         text-align: center;
-        padding: 20px 16px 0px;
         text-decoration: none;
         font-size: 22px;
       }
@@ -345,9 +382,8 @@ html::-webkit-scrollbar-thumb:hover {
         text-align: right;
         margin-top: -20px !important;
       }
-      .card_align{
-        margin-left: 37px !important;
-        margin-top: 20% !important;
+      .mass-res {
+        margin-top: 17% !important;
       }
   }
 
@@ -435,6 +471,7 @@ button:hover {
 
 .gfg { 
 	text-align: center; 
+  padding-bottom: 5%;
 	color: rgb(158 5 43); 
 } 
 
