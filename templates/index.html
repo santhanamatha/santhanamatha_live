@@ -41,10 +41,31 @@
                         </a>
                     </div>
                 </div>
+                {% if last_events %}
+                        {% for notification in last_events %}
+                        <div id="scroll-container">
+                            {% if notification.live_link %}
+                                <a style="text-decoration: none;color: whitesmoke;" href="{{ notification.live_link }}" target="_blank">
+                                    <div id="scroll-text">
+                                        {{ notification.discription }}.
+                                    </div>
+                                </a>
+                                {% else %}
+                                    <div id="scroll-text">
+                                        {{ notification.discription }}.
+                                    </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                    <div id="scroll-container">
+                            <div id="scroll-text">Welcome to the Santhanamatha Church .</div>
+                    </div>
+                    {% endif %}
             {% endblock %}
             {% block content%}
                 <div>
-                    <div class="slideshow-container" style="margin-top: 6%;" >
+                    <div class="slideshow-container" style="margin-top: 0%;" >
                         <div class="mySlides fade" style="text-align-last: center;">
                         <img src="{% static 'images/c1.jpeg' %}" style="width:95%">
                         <div class="text">Caption Text</div>
@@ -69,19 +90,19 @@
                 <div class="ffbox mb-5 card_align" > 
                     <div class="ffbox1">
                         <div> 
-                            <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதா வரலாறு</h1> 
+                            <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதாவை நோக்கி ஜெபம்</h1> 
                             <div class="row">
                                 <div class="col-12">
-                                    <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவன் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
-                                        தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து /
-                                        நீர் வளம் பெற்ற மரம் போல் / இவ்வுலக வாழ்விலே நற்பணி தந்து / எங்களுக்கு இறைவன் தந்த மக்கள் செல்வங்களை / நன்னெறியில்  நடத்த அருள் புரியும். / நாங்கள் அருளிலும் அறிவிலும்  / அன்பிலும் அமைதியிலும் வாழ்ந்து / வளம் பெற செய்தருளும்.  / உலக வாழ்க்கையிலே / குறுக்கிடும்  அனைத்து</p>
+                                    <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவனின் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
+                                        தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து
+                                        <a class="ml-3" href="{% url 'prayer' %}"> Read More ...</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h2 class="gfg mb-4 navanal_heading">தேவாலய நிகழ்வுகள்</h1> 
+                    <h2 class="gfg mt-4 navanal_heading">தேவாலய நிகழ்வுகள்</h1> 
                 </div>
                 <div class="video-container" style="place-content: center;color: #9e052b;" >
                     {% if last_two_events %}
@@ -102,21 +123,6 @@
                         <path d="M9 18l6-6-6-6"/>
                     </svg>
                     </span></a>
-                </div>
-                <div class="ffbox mb-5 card_align" > 
-                    <div class="ffbox1">
-                        <div> 
-                            <h2 class="gfg mb-3 navanal_heading">புனித சந்தன மாதாவை நோக்கி ஜெபம்</h1> 
-                            <div class="row">
-                                <div class="col-12">
-                                    <p class="navanal_2">இறையருள் நிறைந்த புனித சந்தன மாதாவே! கன்னி மரியாளின் எழில்மிகு ஒப்பற்ற தாயே ! சந்தன மாதா ஆலயத்தில் வீற்றிருந்து / உமது அன்பின் அருளால் / அண்டி வரும் மக்களுக்கு / இறைவன் அருட்கொடைகளை வாரி வழங்கி  வருகின்றீர் ./  உமக்கே எங்கள் வணக்கமும் நன்றியும் உரித்தாகுக!
-                                        தாயே இறைவனால் நீர் எவ்வளவோ நேசிக்கப்பட்டிருக்கிறீர். நீர் கேட்கும்  மன்றாட்டை / அவர் தர மறுப்பதில்லை என அறிந்திருக்கிற நாங்களும் / உமது திருவடி அருகில் நிற்கின்றோம் . இறைவனின் அருளை மிகுதியாக கொண்ட புனித சந்தன மாதாவே !நாங்கள் இறையருள் நிறைந்த இல்லத்தினராய் வாழ்ந்து /
-                                        நீர் வளம் பெற்ற மரம் போல் / இவ்வுலக வாழ்விலே நற்பணி தந்து / எங்களுக்கு இறைவன் தந்த மக்கள் செல்வங்களை / நன்னெறியில்  நடத்த அருள் புரியும். / நாங்கள் அருளிலும் அறிவிலும்  / அன்பிலும் அமைதியிலும் வாழ்ந்து / வளம் பெற செய்தருளும்.  / உலக வாழ்க்கையிலே / குறுக்கிடும்  அனைத்து
-                                        <a class="ml-3" href="{% url 'prayer' %}"> Read More ...</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div>
                     <h2 class="gfg mb-3 navanal_heading">தேவாலய வீடியோக்கள்</h1> 
@@ -142,26 +148,34 @@
                     </span></a>        
                 </div>
                 <div style="color: #440707;">
-                    <h2 class="gfg mb-4 navanal_heading mt-3">தேவாலய அமைப்புகள்</h1>
+                    <h2 class="gfg navanal_heading mt-3">தேவாலய அமைப்புகள்</h1>
                     <div class="row" style="margin-right:0 !important;">
                         <div class="col-6 organisation">
                             <h3 class="organisation_txt" style="text-align: right;">பங்கு நிர்வாகக்குழு</h3>
                         </div>
                         <div class="col-6">
-                            <h3 class="organisation_txt">வின்சென்ட் தே பவுல் சபை</h3>
+                            <h3 class="organisation_txt">பல்லோட்டின் அருட்சகோதரிகள்</h3>
                         </div>
                     </div> 
                     <div class="row" style="margin-right:0 !important;">
                         <div class="col-6 organisation" style="text-align: right;">
-                            <h3 class="organisation_txt">மரியாயின் சேனை</h3>
+                            <h3 class="organisation_txt">வின்சென்ட் தே பவுல் சபை</h3>
                         </div>
                         <div class="col-6">
-                            <h3 class="organisation_txt">அன்பியக் குடும்பங்கள்</h3>
+                            <h3 class="organisation_txt">மரியாயின் சேனை</h3>
                         </div>
                     </div> 
                     <div class="row" style="margin-right:0 !important;">
+                        <div class="col-6 organisation" style="text-align: right;">
+                            <h3 class="organisation_txt">அன்பியக் குடும்பங்கள்</h3>
+                        </div>
+                        <div class="col-6">
+                            <h3 class="organisation_txt">பலிபீடச்சிறார்கள்</h3>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-right:0 !important;">
                         <div class="col-12 organisation">
-                            <h3 class="organisation_txt">இளைஞர் மன்றம்</h3>
+                            <h3 class="organisation_txt">இளையோர் மன்றம்</h3>
                         </div>
                     </div>
                 </div>

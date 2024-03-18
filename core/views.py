@@ -12,7 +12,9 @@ class HomePage(View):
     def get(self, request):
         last_two_videos = VideoModel.objects.all().order_by('-date')[:2]
         last_two_events = EventModel.objects.all().order_by('-date')[:2]
+        last_events = NotificationModel.objects.all().order_by('-date')[:1]
         context = {
+        'last_events':last_events,
         'last_two_videos': last_two_videos,
         'last_two_events': last_two_events,
         }
@@ -22,18 +24,25 @@ class MasstimePage(View):
     template_name = 'masstime.html'
     
     def get(self, request):
-        return render(request, self.template_name)
+        last_events = NotificationModel.objects.all().order_by('-date')[:1]
+        context = {
+            'last_events':last_events,
+        }
+        return render(request, self.template_name, context,)
 
 class PrayerPage(View):
     template_name = 'prayer.html'
-    
     def get(self, request):
-        return render(request, self.template_name)
+        last_events = NotificationModel.objects.all().order_by('-date')[:1]
+        context = {
+            'last_events':last_events,
+        }
+        return render(request, self.template_name, context)
     
 def video_list(request):
     # Retrieve all instances of VideoModel from the database
     videos = VideoModel.objects.all().order_by('-date')
-
+    last_events = NotificationModel.objects.all().order_by('-date')[:1]
     # Apply search filter based on duration
     duration = request.GET.get('duration', 'all')
     if duration != 'all':
@@ -49,8 +58,7 @@ def video_list(request):
         videos_paginated = paginator.page(1)
     except EmptyPage:
         videos_paginated = paginator.page(paginator.num_pages)
-
-    return render(request, 'video.html', {'videos': videos_paginated, 'duration': duration})
+    return render(request, 'video.html', {'videos': videos_paginated, 'duration': duration, 'last_events':last_events})
 
 def calculate_start_time(duration):
     now = datetime.now()
@@ -69,6 +77,7 @@ def calculate_start_time(duration):
 
 def event_list(request):
     duration = request.GET.get('duration', 'all')
+    last_events = NotificationModel.objects.all().order_by('-date')[:1]
 
     if duration == '1h':
         start_time = datetime.now() - timedelta(hours=1)
@@ -87,7 +96,6 @@ def event_list(request):
         events = EventModel.objects.filter(date__gte=start_time).order_by('-date')
     else:
         events = EventModel.objects.all().order_by('-date')
-
     # Pagination
     paginator = Paginator(events, 10)  # Show 10 events per page
     page = request.GET.get('page')
@@ -100,11 +108,14 @@ def event_list(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         paginated_events = paginator.page(paginator.num_pages)
 
-    return render(request, 'event.html', {'events': paginated_events, 'duration': duration})
+    return render(request, 'event.html', {'events': paginated_events, 'duration': duration, 'last_events':last_events})
 
     
 class ContactPage(View):
     template_name = 'contact.html'
-    
     def get(self, request):
-        return render(request, self.template_name)
+        last_events = NotificationModel.objects.all().order_by('-date')[:1]
+        context = {
+            'last_events':last_events,
+        }
+        return render(request, self.template_name, context)
