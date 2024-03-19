@@ -573,7 +573,7 @@ footer {
   transform: translateX(100%);
   
   -moz-animation: my-animation 15s linear infinite;
-  -webkit-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 25s linear infinite;
   animation: my-animation 15s linear infinite;
 }
 
@@ -600,4 +600,36 @@ footer {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
+}
+
+/* Styling the player */
+#audioPlayer {
+  width: 300px;
+  margin: 20px;
+}
+
+/* Styling the player controls */
+#audioPlayer::-webkit-media-controls {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+#audioPlayer::-webkit-media-controls-play-button {
+  color: #333;
+}
+
+#audioPlayer::-webkit-media-controls-time-remaining-display {
+  color: #333;
+}
+
+#audioPlayer::-webkit-media-controls-timeline {
+  background-color: #ccc;
+}
+
+#audioPlayer::-webkit-media-controls-current-time-display {
+  color: #333;
+}
+
+#audioPlayer::-webkit-media-controls-volume-slider {
+  background-color: #ccc;
 }
