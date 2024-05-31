@@ -79,8 +79,7 @@ WSGI_APPLICATION = 'santhanamatha.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse("postgres://churchdb_rje4_user:kL2PiBXL7jeDZsaS5uhPhXpTbXmKIceh@dpg"
-                                     "-cngavv6n7f5s73fe75k0-a.oregon-postgres.render.com/churchdb_rje4")
+    'default': dj_database_url.parse("postgres://santhamathalivedb_user:NRoQwN9fkuBZ9N87jJe4nX0XIsFsLXpA@dpg-cpcmk9kf7o1s73fqugn0-a/santhamathalivedb")
 }
 
 
