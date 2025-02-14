@@ -79,14 +79,7 @@ WSGI_APPLICATION = 'santhanamatha.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "defaultdb",
-        "USER": "avnadmin",
-        "PASSWORD": "AVNS_cf0-c9EGG12XdawUnQL",
-        "HOST": "pg-140f608-santhanamatha09-5984.h.aivencloud.com",
-        "PORT": 22023, 
-    }
+    'default': dj_database_url.parse("postgres://avnadmin:AVNS_cf0-c9EGG12XdawUnQL@pg-140f608-santhanamatha09-5984.h.aivencloud.com:22023/defaultdb?sslmode=require")
 }
 
 
