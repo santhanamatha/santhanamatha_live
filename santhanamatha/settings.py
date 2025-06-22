@@ -78,10 +78,16 @@ WSGI_APPLICATION = 'santhanamatha.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse("postgres://avnadmin:AVNS_Ao4ZmlzEdU3NJlYFeHu@pg-3f7ae4dd-santhanamatha09-5984.f.aivencloud.com:22023/defaultdb?sslmode=require")
-}
+# DATABASES = {
+#     'default': dj_database_url.parse("postgres://avnadmin:AVNS_Ao4ZmlzEdU3NJlYFeHu@pg-3f7ae4dd-santhanamatha09-5984.f.aivencloud.com:22023/defaultdb?sslmode=require")
+# }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
