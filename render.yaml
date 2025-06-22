@@ -4,6 +4,3 @@ services:
     buildCommand: "./build.sh"
     env: python
     startCommand: "gunicorn santhanamatha.wsgi:application"
-    preDeployCommand: |
-      python manage.py makemigrations
-      python manage.py migrate
